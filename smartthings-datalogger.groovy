@@ -123,5 +123,5 @@ private logField(evt, metric, value) {
 
 private postapi(command) {
 	def length = command.getBytes().size().toString()
-	sendHubCommand(new physicalgraph.device.HubAction("""POST /house.metric HTTP/1.1\r\nHOST: 10.0.0.111:8080\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: ${length}\r\nAccept:*/*\r\n\r\n${command}""", physicalgraph.device.Protocol.LAN, "XXXXXXXX:PPP"))
+	sendHubCommand(new physicalgraph.device.HubAction("""POST /house.metric HTTP/1.1\r\nHOST: 10.0.0.111:8080\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: ${length}\r\nAccept:*/*\r\n\r\n${command}""", physicalgraph.device.Protocol.LAN, "0A00006F:1F90"))
 }
